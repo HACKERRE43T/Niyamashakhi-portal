@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NiyamaShakthi : Download for Android</title>
+    <style>
+        /* General Styles */
+        body {
+            margin: 0;
+            font-family: 'Arial', sans-serif;
+            background: radial-gradient(circle, #1a1a1a, #000000);
+            color: white;
+            overflow-x: hidden;
+        }
+
+        /* Uchiha Theme */
+        .container {
+            text-align: center;
+            padding: 50px;
+            position: relative;
+            z-index: 10;
+        }
+
+        h1 {
+            font-size: 3rem;
+            color: crimson;
+            text-shadow: 0 0 10px crimson, 0 0 20px red;
+        }
+
+        .description {
+            margin: 20px auto;
+            font-size: 1.2rem;
+            max-width: 700px;
+            line-height: 1.6;
+            text-shadow: 0 0 5px #333;
+        }
+
+        /* Sharingan Symbol */
+        .sharingan {
+            width: 150px;
+            height: 150px;
+            margin: 20px auto;
+            background: url('https://upload.wikimedia.org/wikipedia/commons/5/56/Uchiha_Clan_Symbol.svg') no-repeat center;
+            background-size: contain;
+            animation: spin 10s linear infinite;
+        }
+
+        @keyframes spin {
+            from {
+                transform: rotate(0deg);
+            }
+            to {
+                transform: rotate(360deg);
+            }
+        }
+
+        /* Download Button */
+        .download-btn {
+            display: inline-block;
+            padding: 15px 30px;
+            background: crimson;
+            color: white;
+            font-size: 1.2rem;
+            font-weight: bold;
+            border-radius: 5px;
+            text-decoration: none;
+            text-shadow: 0 0 10px #000;
+            box-shadow: 0 0 15px crimson;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .download-btn:hover {
+            transform: scale(1.1);
+            box-shadow: 0 0 30px crimson;
+        }
+
+        /* Parallax Scroll Effect */
+        .parallax {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 200%;
+            background: url('https://upload.wikimedia.org/wikipedia/commons/5/56/Uchiha_Clan_Symbol.svg') repeat;
+            background-size: 100px 100px;
+            background-attachment: fixed;
+            background-position: center;
+            z-index: 1;
+            opacity: 0.1;
+        }
+
+        /* Floating Particles */
+        .particles {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 5;
+        }
+
+        .particle {
+            position: absolute;
+            background: crimson;
+            border-radius: 50%;
+            animation: float 5s infinite ease-in-out;
+        }
+
+        @keyframes float {
+            from {
+                transform: translateY(0);
+                opacity: 1;
+            }
+            to {
+                transform: translateY(-100vh);
+                opacity: 0;
+            }
+        }
+
+        /* Smooth Scroll Effect */
+        html {
+            scroll-behavior: smooth;
+        }
+    </style>
+</head>
+<body>
+    <!-- Parallax Background -->
+    <div class="parallax"></div>
+
+    <!-- Main Content -->
+    <div class="container">
+        <div class="sharingan"></div>
+        <h1>NiyamaShakthi</h1>
+        <p class="description">
+            Welcome to NiyamaShakthi
+
+            NiyamaShakthi is a revolutionary AI-powered platform designed to make legal services more accessible, efficient, and affordable for everyone. Built with cutting-edge technology, it bridges the gap between users and top-notch legal assistance.
+            
+            Key Features:
+            AI Lawyer
+            An intelligent assistant for legal queries and document drafting. Whether you need contracts, agreements, or personalized legal documents, the AI Lawyer delivers professional-grade results instantly.
+            
+            Legal Connect
+            A unique facility that connects users with top lawyers at an affordable price. It enables seamless consultations with experienced legal professionals, ensuring you receive expert advice without breaking the bank.
+            
+            User-Friendly Experience
+            With its sleek design and intuitive interface, NiyamaShakthi simplifies legal complexities, making it accessible to everyone, from individuals to businesses.
+            
+            Secure and Reliable
+            Built with the latest encryption technologies, NiyamaShakthi ensures the privacy and security of your data, giving you peace of mind while accessing legal services.
+            
+            Join the NiyamaShakthi revolution and experience the future of legal assistance—empowering justice at your fingertips.
+        </p>
+        <a class="download-btn" href="https://drive.google.com/file/d/1iph1Rr1Mte1JDPL9PQU6NjbWrlYcYn95/view?usp=drive_link" target="_blank">Download Now</a>
+    </div>
+
+    <!-- Floating Particles -->
+    <div class="particles">
+        <script>
+            const particles = document.querySelector('.particles');
+            for (let i = 0; i < 100; i++) {
+                const particle = document.createElement('div');
+                particle.className = 'particle';
+                particle.style.width = particle.style.height = `${Math.random() * 5 + 5}px`;
+                particle.style.left = `${Math.random() * 100}vw`;
+                particle.style.top = `${Math.random() * 100}vh`;
+                particle.style.animationDuration = `${Math.random() * 3 + 2}s`;
+                particles.appendChild(particle);
+            }
+        </script>
+    </div>
+</body>
+</html>
